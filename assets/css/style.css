@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+}
+body {
+  position: relative;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  min-height: 100%;
+}
+.zensoku-zenshin {
+  text-align: center;
+  text-shadow: 0 0.2em 0.2rem rgba(0, 0, 0, 0.2);
+}
+.kaomoji {
+  padding-left: .5em;
+}
+.you {
+  color: #56c7f2;
+}
+.copyright {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px 10px;
+}
