@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  you-chan:
+    image: nginx:latest
+    container_name: you-chan
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    environment:
+      - TZ=Asia/Tokyo
+      - VIRTUAL_HOST=youwatana.be
