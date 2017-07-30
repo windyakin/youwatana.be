@@ -14,16 +14,53 @@ body {
 .zensoku-zenshin {
   text-align: center;
   text-shadow: 0 0.2em 0.2rem rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
 }
 .kaomoji {
   padding-left: .5em;
+  animation: waggle ease 7s 1s infinite;
 }
 .you {
   color: #56c7f2;
+}
+.btn .twitter-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: top;
 }
 .copyright {
   position: fixed;
   bottom: 0;
   right: 0;
   padding: 5px 10px;
+}
+
+@keyframes waggle {
+  0% {
+    transform: none;
+  }
+  12.5% {
+    transform: rotateZ(-2deg) scale(1.05);
+  }
+  15% {
+    transform: rotateZ(5deg) scale(1.05);
+  }
+  16.25% {
+    transform: rotateZ(-2deg) scale(1.05);
+  }
+  17.5% {
+    transform: rotateZ(2deg) scale(1.05);
+  }
+  18.75% {
+    transform: rotateZ(-2deg) scale(1.05);
+  }
+  20% {
+    transform: rotateZ(0) scale(1.05);
+  }
+  25% {
+    transform: rotateZ(0) scale(1);
+  }
+  100% {
+    transform: none;
+  }
 }
