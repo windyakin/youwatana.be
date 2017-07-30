@@ -3,9 +3,12 @@ version: '2'
 services:
   you-chan:
     volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./default.conf.template:/etc/nginx/conf.d/default.conf.template
     environment:
       - VIRTUAL_HOST=youwatana.be,www.youwatana.be
+      - WRONG_HOST=www.youwatana.be
+      - TRUES_HOST=youwatana.be
+    command: /bin/bash -c "envsubst '$$WRONG_HOST$$TRUES_HOST' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 
 networks:
   default:
