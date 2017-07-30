@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  you-chan:
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      - VIRTUAL_HOST=youwatana.be,www.youwatana.be
+
+networks:
+  default:
+    external:
+      name: shared
